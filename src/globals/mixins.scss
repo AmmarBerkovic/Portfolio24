@@ -1,0 +1,10 @@
+@import "./variables.scss";
+
+@mixin center-container {
+  width: $max-content-width;
+  margin: 0 auto;
+}
+@mixin remove-default-spacing {
+  padding: 0px;
+  margin: 0px;
+}

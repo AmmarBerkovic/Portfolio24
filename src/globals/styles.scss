@@ -1,0 +1,15 @@
+@import "./variables.scss";
+
+* {
+  background-color: $color-pallete-white;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  margin: 5% auto 0px;
+  background-color: black;
+}
+section {
+  width: $max-content-width;
+  height: 80vh;
+}
