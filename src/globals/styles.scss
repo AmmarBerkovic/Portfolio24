@@ -1,15 +1,17 @@
 @import "./variables.scss";
-
+@import "./mixins.scss";
 * {
-  background-color: $color-pallete-white;
   list-style: none;
   text-decoration: none;
 }
+a {
+  color: black;
+}
 body {
-  margin: 5% auto 0px;
-  background-color: black;
+  margin: 0px;
+  background-color: $color-pallete-gray;
 }
 section {
-  width: $max-content-width;
-  height: 80vh;
+  @include center-container;
+  height: 100vh;
 }

@@ -1,10 +1,56 @@
 @import "./variables.scss";
 
 @mixin center-container {
-  width: $max-content-width;
+  max-width: $max-content-width;
   margin: 0 auto;
 }
 @mixin remove-default-spacing {
   padding: 0px;
   margin: 0px;
+}
+@mixin higher($point) {
+  @if $point == xs {
+    @media (min-width: 0px) {
+      @content;
+    }
+  } @else if $point == sm {
+    @media (min-width: 576px) {
+      @content;
+    }
+  } @else if $point == md {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $point == lg {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if $point == xl {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}
+@mixin lower($point) {
+  @if $point == xs {
+    @media (max-width: 0px) {
+      @content;
+    }
+  } @else if $point == sm {
+    @media (max-width: 576px) {
+      @content;
+    }
+  } @else if $point == md {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $point == lg {
+    @media (max-width: 992px) {
+      @content;
+    }
+  } @else if $point == xl {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
 }

@@ -1,0 +1,58 @@
+@import "/src/globals/mixins.scss";
+@import "/src/globals/variables.scss";
+
+header {
+  @include center-container;
+  position: sticky;
+  top: 0px;
+  @include lower(md) {
+    position: sticky;
+    right: 0;
+    top: 0;
+    width: max-content;
+    display: none;
+    margin-right: 0px;
+    height: 100vh;
+    z-index: 10;
+    background-color: $color-pallete-gray;
+    border: 1px solid black;
+    border-radius: 10px 0px 0px 10px;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    @include lower(md) {
+      flex-direction: column;
+      padding: 20px 50px 20px 30px;
+    }
+    ul {
+      @include remove-default-spacing;
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      @include lower(md) {
+        flex-direction: column;
+        gap: 16px;
+      }
+      li {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+.hamburgerMenuIcon, .xMarkIcon {
+  display: none;
+  @include lower(md) {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+}
+.social-icons {
+  @include lower(md) {
+    display: none;
+  }
+}
