@@ -1,8 +1,12 @@
 @import "./variables.scss";
 @import "./mixins.scss";
+@import "./fonts.scss";
+
+//TODO: does importing styles.scss imports it's imports, if so delete it from other files
 * {
   list-style: none;
   text-decoration: none;
+  font-family: "Nunito";
 }
 a {
   color: black;
@@ -13,5 +17,6 @@ body {
 }
 section {
   @include center-container;
+  @include default-flex;
   height: 100vh;
 }

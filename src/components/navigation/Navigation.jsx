@@ -63,16 +63,16 @@ export default function Navigation() {
         <nav>
           <ul>
             <li>
-              <a href="#section1">Home</a>
+              <a href="#1">Home</a>
             </li>
             <li>
-              <a href="#section2">About</a>
+              <a href="#2">About</a>
             </li>
             <li>
-              <a href="#section3">Projects</a>
+              <a href="#3">Projects</a>
             </li>
             <li>
-              <a href="#section4">Contact</a>
+              <a href="#4">Contact</a>
             </li>
           </ul>
           <ul className="social-icons">

@@ -8,6 +8,12 @@
   padding: 0px;
   margin: 0px;
 }
+@mixin default-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
 @mixin higher($point) {
   @if $point == xs {
     @media (min-width: 0px) {

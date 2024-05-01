@@ -2,16 +2,17 @@
 @import "/src/globals/variables.scss";
 
 header {
-  @include center-container;
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0px;
+  font-weight: 700;
   @include lower(md) {
-    position: sticky;
     right: 0;
     top: 0;
     width: max-content;
     display: none;
     margin-right: 0px;
+    float: right;
     height: 100vh;
     z-index: 10;
     background-color: $color-pallete-gray;
@@ -19,6 +20,7 @@ header {
     border-radius: 10px 0px 0px 10px;
   }
   nav {
+    @include center-container;
     display: flex;
     justify-content: space-between;
     align-items: center;
