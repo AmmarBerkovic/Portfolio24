@@ -19,4 +19,6 @@ section {
   @include center-container;
   @include default-flex;
   height: 100vh;
+  position: relative;
+  z-index: 100;
 }

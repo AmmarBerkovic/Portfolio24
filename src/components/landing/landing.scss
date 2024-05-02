@@ -1,0 +1,19 @@
+@import "/src/globals/mixins.scss";
+.landing-wrapper {
+  justify-content: space-evenly;
+  .info-block {
+    p {
+      @include remove-default-spacing;
+      font-weight: 700;
+      font-size: 22px;
+    }
+  }
+  .image-block {
+
+
+    picture img {
+      width: 300px;
+      height: 400px;
+    }
+  }
+}

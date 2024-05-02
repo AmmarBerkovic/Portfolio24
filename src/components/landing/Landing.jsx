@@ -1,11 +1,18 @@
 import "./landing.scss";
+import selfImage from "../../assets/prof.jpg";
 
 export default function Landing() {
   return (
-    <section id="1">
-      <h1>Need a full stack developer?</h1>
-      <h2>You have come to the right place!</h2>
-      <h3>Meet Ammar Berkovic</h3>
+    <section className="landing-wrapper" id="1">
+      {/* <div className="info-block">
+        <p>Need a Web solution?</p>
+        <h1>Meet Ammar Berkovic</h1>
+      </div>
+      <div className="image-block">
+        <picture>
+          <img src={selfImage} alt="Ammar Berkovic" />
+        </picture>
+      </div> */}
     </section>
   );
 }
