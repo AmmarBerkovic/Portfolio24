@@ -15,7 +15,6 @@ header {
     margin-right: 0px;
     float: right;
     height: 100vh;
-    z-index: 10;
     background-color: $color-pallete-gray;
     border: 1px solid black;
     border-radius: 10px 0px 0px 10px;
@@ -39,8 +38,16 @@ header {
         flex-direction: column;
         gap: 16px;
       }
+      &.section-navigation li:hover {
+        border-bottom: 3px solid $color-cta;
+      }
       li {
         font-size: 1.5rem;
+        transition: all 0.5s;
+        &:hover {
+          transition: all 0.5s;
+          transform: scale(1.1);
+        }
       }
     }
   }

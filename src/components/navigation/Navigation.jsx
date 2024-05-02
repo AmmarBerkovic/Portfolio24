@@ -61,7 +61,7 @@ export default function Navigation() {
           size="2x"
         />
         <nav>
-          <ul>
+          <ul className="section-navigation">
             <li>
               <a href="#1">Home</a>
             </li>
