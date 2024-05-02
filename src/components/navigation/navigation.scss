@@ -6,6 +6,7 @@ header {
   width: 100%;
   top: 0px;
   font-weight: 700;
+  z-index: 101;
   @include lower(md) {
     right: 0;
     top: 0;
