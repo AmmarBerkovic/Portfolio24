@@ -4,21 +4,18 @@
 
 //TODO: does importing styles.scss imports it's imports, if so delete it from other files
 * {
-  list-style: none;
-  text-decoration: none;
   font-family: "Nunito";
 }
-a {
+a, li {
   color: black;
-}
-body {
-  margin: 0px;
-  background-color: $color-pallete-gray;
+  list-style: none;
+  text-decoration: none;
 }
 section {
   @include center-container;
   @include default-flex;
   height: 100vh;
+  padding: 0px 30px;
   position: relative;
   z-index: 100;
 }

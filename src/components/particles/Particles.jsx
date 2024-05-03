@@ -1,7 +1,6 @@
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 import { useCallback } from "react";
-import "./particles.scss";
 
 export default function ParticlesBackground() {
   const particlesInit = useCallback(async (engine) => {
@@ -23,7 +22,7 @@ export default function ParticlesBackground() {
       options={{
         background: {
           color: {
-            value: "#31312F",
+            value: "#434343",
           },
         },
         fpsLimit: 120,
@@ -31,7 +30,7 @@ export default function ParticlesBackground() {
           events: {
             onClick: {
               enable: true,
-              mode: "grab",
+              mode: "push",
             },
             onHover: {
               enable: true,
@@ -41,35 +40,25 @@ export default function ParticlesBackground() {
           },
           modes: {
             push: {
-              quantity: 4,
+              quantity: 20,
             },
-            repulse: {
-              distance: 200,
-              duration: 0.4,
+            grab: {
+              distance: 150, // Adjust the distance at which particles are grabbed by the cursor
             },
-          },
+          },  
         },
         particles: {
-          color: {
-            value: "#ffffff",
-          },
-          links: {
-            enable: false, // No links
-          },
           move: {
             direction: "none",
             enable: true,
-            outModes: {
-              default: "bounce",
-            },
             random: false,
-            speed: 0.5, // Speed set to 0.1
+            speed: 0.5,
             straight: false,
           },
           number: {
             density: {
               enable: true,
-              area: 800,
+              area: 500,
             },
             value: 120,
           },
@@ -88,6 +77,13 @@ export default function ParticlesBackground() {
           },
           size: {
             value: { min: 3, max: 7 },
+          },
+          links: {
+            color: "#855858",
+            distance: 150,
+            // enable: true,
+            opacity: 0.5,
+            width: 1,
           },
         },
         detectRetina: true,

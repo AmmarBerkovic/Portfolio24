@@ -54,6 +54,7 @@ header {
 }
 .hamburgerMenuIcon, .xMarkIcon {
   display: none;
+  z-index: 101;
   @include lower(md) {
     display: block;
     position: absolute;

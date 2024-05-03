@@ -1,18 +1,36 @@
 @import "/src/globals/mixins.scss";
 .landing-wrapper {
-  justify-content: space-evenly;
+  .info-block, .image-block {
+    @include default-flex;
+    width: 50%;
+  }
   .info-block {
-    p {
+    justify-content: flex-start;
+    span,
+    h1 {
       @include remove-default-spacing;
+      flex-direction: column;
+      width: 100%;
+    }
+    h1 {
+      font-size: 42px;
+      span {
+        font-size: 42px;
+        color: lemonchiffon;
+      }
+    }
+    span {
       font-weight: 700;
       font-size: 22px;
     }
+    p {
+      font-size: 20px;
+      font-weight: 600;
+    }
   }
   .image-block {
-
-
     picture img {
-      width: 300px;
+      border-radius: 25px;
       height: 400px;
     }
   }
