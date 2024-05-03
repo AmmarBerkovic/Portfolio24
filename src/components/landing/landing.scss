@@ -1,8 +1,9 @@
 @import "/src/globals/mixins.scss";
+
 .landing-wrapper {
   .info-block, .image-block {
     @include default-flex;
-    width: 50%;
+    width: 40%;
   }
   .info-block {
     justify-content: flex-start;
@@ -16,7 +17,7 @@
       font-size: 42px;
       span {
         font-size: 42px;
-        color: lemonchiffon;
+        color: $color-cta;
       }
     }
     span {

@@ -1,5 +1,5 @@
 import "./landing.scss";
-import selfImage from "../../assets/prof.jpg";
+import selfImage from "../../assets/me.jpg";
 
 export default function Landing() {
   return (

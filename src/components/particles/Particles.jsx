@@ -1,6 +1,7 @@
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 import { useCallback } from "react";
+import snowflake from "./../../assets/snowflake.svg"
 
 export default function ParticlesBackground() {
   const particlesInit = useCallback(async (engine) => {
@@ -22,7 +23,7 @@ export default function ParticlesBackground() {
       options={{
         background: {
           color: {
-            value: "#434343",
+            value: "#171717",
           },
         },
         fpsLimit: 120,
@@ -43,7 +44,7 @@ export default function ParticlesBackground() {
               quantity: 20,
             },
             grab: {
-              distance: 150, // Adjust the distance at which particles are grabbed by the cursor
+              distance: 100, // Adjust the distance at which particles are grabbed by the cursor
             },
           },  
         },
@@ -52,7 +53,7 @@ export default function ParticlesBackground() {
             direction: "none",
             enable: true,
             random: false,
-            speed: 0.5,
+            speed: 1,
             straight: false,
           },
           number: {
@@ -63,14 +64,14 @@ export default function ParticlesBackground() {
             value: 120,
           },
           opacity: {
-            value: 0.3,
+            value: 0.1,
           },
           shape: {
             // type: 'none', // No shape defined (to create a starry sky effect)
             // To use custom image instead, uncomment the following lines:
             type: "image",
             image: {
-              src: "https://www.svgrepo.com/show/77656/snowflake.svg",
+              src: `${snowflake}`,
               width: 50,
               height: 50,
             },
@@ -79,11 +80,10 @@ export default function ParticlesBackground() {
             value: { min: 3, max: 7 },
           },
           links: {
-            color: "#855858",
-            distance: 150,
+            color: "#7C7C7C",
             // enable: true,
-            opacity: 0.5,
-            width: 1,
+            opacity: 1,
+            width: 0.5,
           },
         },
         detectRetina: true,
