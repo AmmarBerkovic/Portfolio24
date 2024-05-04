@@ -7,6 +7,7 @@ import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import "./navigation.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState, useEffect, useRef } from "react";
+import { NavLink } from "react-router-dom";
 
 export default function Navigation() {
   const [hambMenu, setHambMenu] = useState(false);
@@ -14,7 +15,7 @@ export default function Navigation() {
   const hambMenuRef = useRef(null);
 
   const toggleHamburgerMenu = () => {
-    setHambMenu(!hambMenu)
+    setHambMenu(!hambMenu);
   };
   const handleClickOutside = (event) => {
     if (
@@ -63,16 +64,16 @@ export default function Navigation() {
         <nav>
           <ul className="section-navigation">
             <li>
-              <a href="#1">Home</a>
+              <NavLink to="#home" activeClassName="active">Home</NavLink>
             </li>
             <li>
-              <a href="#2">About</a>
+              <NavLink to="#about" activeClassName="active">About</NavLink>
             </li>
             <li>
-              <a href="#3">Projects</a>
+              <NavLink to="#projects" activeClassName="active">Projects</NavLink>
             </li>
             <li>
-              <a href="#4">Contact</a>
+              <NavLink to="#contact" activeClassName="active">Contact</NavLink>
             </li>
           </ul>
           <ul className="social-icons">

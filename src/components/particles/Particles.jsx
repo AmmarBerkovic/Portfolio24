@@ -53,7 +53,7 @@ export default function ParticlesBackground() {
             direction: "none",
             enable: true,
             random: false,
-            speed: 1,
+            speed: 0.7,
             straight: false,
           },
           number: {
@@ -64,7 +64,14 @@ export default function ParticlesBackground() {
             value: 120,
           },
           opacity: {
-            value: 0.1,
+            value: 0.4, // Initial opacity
+            random: true, // Randomize opacity
+            anim: {
+              enable: true,
+              speed: 1, // Speed of opacity change
+              opacity_min: 0.1, // Minimum opacity
+              sync: false,
+            },
           },
           shape: {
             // type: 'none', // No shape defined (to create a starry sky effect)

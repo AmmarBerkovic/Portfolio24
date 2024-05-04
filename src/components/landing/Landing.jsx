@@ -3,7 +3,7 @@ import selfImage from "../../assets/me.jpg";
 
 export default function Landing() {
   return (
-    <section className="landing-wrapper" id="1">
+    <section className="landing-wrapper" id="home">
       <div className="info-block">
         <span>Need a Web solution?</span>
         <h1>
