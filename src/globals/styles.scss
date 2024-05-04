@@ -5,11 +5,15 @@
 //TODO: does importing styles.scss imports it's imports, if so delete it from other files
 * {
   font-family: "Nunito";
-  color: #FFF0DB;
+  color: #fff0db;
 }
-a, li {
+a,
+li {
   list-style: none;
   text-decoration: none;
+}
+h1, h2,h3, p, ul {
+  @include remove-default-spacing;
 }
 section {
   @include center-container;
@@ -18,4 +22,7 @@ section {
   padding: 0px 30px;
   position: relative;
   z-index: 100;
+  @include lower(sm) {
+    padding: 0px 10px;
+  }
 }

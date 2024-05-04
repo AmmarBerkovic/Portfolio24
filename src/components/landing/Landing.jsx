@@ -1,5 +1,6 @@
 import "./landing.scss";
-import selfImage from "../../assets/me.jpg";
+// import selfImage from "../../assets/me.jpg";
+import Contact from '../contact/Contact'
 
 export default function Landing() {
   return (
@@ -17,10 +18,11 @@ export default function Landing() {
           promising skill-set looking for a growth-oriented company.{" "}
         </p>
       </div>
-      <div className="image-block">
-        <picture>
+      <div className="contact-block">
+        <Contact />
+        {/* <picture>
           <img src={selfImage} alt="Ammar Berkovic" />
-        </picture>
+        </picture> */}
       </div>
     </section>
   );

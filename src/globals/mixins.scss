@@ -31,10 +31,6 @@
     @media (min-width: 992px) {
       @content;
     }
-  } @else if $point == xl {
-    @media (min-width: 1200px) {
-      @content;
-    }
   }
 }
 @mixin lower($point) {
@@ -52,10 +48,6 @@
     }
   } @else if $point == lg {
     @media (max-width: 992px) {
-      @content;
-    }
-  } @else if $point == xl {
-    @media (max-width: 1200px) {
       @content;
     }
   }

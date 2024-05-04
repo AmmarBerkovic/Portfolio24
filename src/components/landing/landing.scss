@@ -1,38 +1,62 @@
 @import "/src/globals/mixins.scss";
 
 .landing-wrapper {
-  .info-block, .image-block {
+  @include lower(lg) {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 20px;
+  }
+  .info-block,
+  .contact-block {
     @include default-flex;
-    width: 40%;
+    width: 50%;
+    @include lower(lg) {
+      width: 100%;
+    }
   }
   .info-block {
-    justify-content: flex-start;
+    & > * {
+      padding: 0px 20px;
+      @include lower(lg) {
+        text-align: center;
+        padding: 0px 3px;
+      }
+    }
     span,
     h1 {
-      @include remove-default-spacing;
       flex-direction: column;
       width: 100%;
     }
     h1 {
       font-size: 42px;
+      margin-bottom: 10px;
+      @include lower(sm) {
+        font-size: 26px;
+      }
       span {
-        font-size: 42px;
+        font-size: inherit;
         color: $color-cta;
       }
     }
     span {
       font-weight: 700;
       font-size: 22px;
+      @include lower(sm) {
+        font-size: 16px;
+      }
     }
     p {
       font-size: 20px;
       font-weight: 600;
+      @include lower(sm) {
+        font-size: 16px
+      }
     }
   }
-  .image-block {
-    picture img {
-      border-radius: 25px;
-      height: 400px;
-    }
-  }
+  // .image-block {
+  //   picture img {
+  //     border-radius: 25px;
+  //     height: 400px;
+  //   }
+  // }
 }

@@ -1,0 +1,58 @@
+@import "../../globals/variables.scss";
+@import "../../globals/mixins.scss";
+
+.contact-wrapper,
+form {
+  @include default-flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact-wrapper {
+  width: 100%;
+  .contact-headline {
+    font-size: 42px;
+    color: $color-cta;
+    @include lower(sm) {
+      font-size: 26px;
+    }
+  }
+  .contact-text {
+    @include lower(sm) {
+      display: none;
+    }
+  }
+  form {
+    flex-wrap: nowrap;
+    width: 80%;
+    input,
+    textarea {
+      background-color: transparent !important;
+      width: 100%;
+      padding: 10px;
+      border: 1px solid white;
+      border-radius: 4px;
+      font-size: 15px;
+      @include lower (lg) {
+        max-width: 500px;
+      }
+      @include lower(sm) {
+        width: 100%;
+      }
+    }
+    // textarea {
+    //   max-width: 100%;
+    //   min-width: 100%;
+    //   max-height: 120px;
+    //   min-height: 50px;
+    // }
+    button {
+      cursor: pointer;
+      text-transform: uppercase;
+      font-size: 20px;
+      font-weight: 900;
+      background-color: transparent;
+      border: 0px;
+      border-bottom: 3px solid $color-cta;
+    }
+  }
+}
