@@ -9,10 +9,9 @@ export default function Home() {
     <>
       <ParticlesBackground id="particles"/>
       <Navigation />
-
       <Landing />
-      <Projects />
       <About />
+      <Projects />
     </>
   );
 }

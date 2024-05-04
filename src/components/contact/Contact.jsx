@@ -1,12 +1,15 @@
 import "./contact.scss";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
+  const serviceId = process.env.REACT_APP_SERVICE_ID;
+  const templateId = process.env.REACT_APP_TEMPLATE_ID;
+  const publicKey = process.env.REACT_APP_PUBLIC_KEY;
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
-    validationMesage: ""
   });
 
   const handleChange = (e) => {
@@ -17,17 +20,18 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Here you can handle form submission, such as sending data to a server
-    console.log("Form submitted with data:", formData);
-    // Reset form fields after submission
     setFormData({
       name: "",
       email: "",
       message: "",
-      validationMessage: "Form submitted! "
     });
+    try {
+      await emailjs.send(serviceId, templateId, formData, publicKey);
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   return (

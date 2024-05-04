@@ -1,7 +1,7 @@
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 import { useCallback } from "react";
-import snowflake from "./../../assets/snowflake.svg"
+import snowflake from "./../../assets/images/snowflake.svg"
 
 export default function ParticlesBackground() {
   const particlesInit = useCallback(async (engine) => {
