@@ -18,7 +18,7 @@ h1, h2,h3, p, ul {
 section {
   @include center-container;
   @include default-flex;
-  height: 100vh;
+  height: 95vh;
   padding: 0px 30px;
   position: relative;
   z-index: 100;
