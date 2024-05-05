@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "Web Developer, Glide Tech",
+    "description": "As a part of content engineering team, I have specialized in deploying content models and utilizing CMS technology, a role that also encompassed signi8cant front-end development. This engagement providedme with invaluable experience in client communication, involving both needs analysis prior to the initial release and ongoing maintenance after product launch.",
+    "buttonText": "View Repo",
+    "date": "July 2021 - present",
+    "icon": "work"
+  },
+  {
+    "id": 2,
+    "title": "Cape Ann Internship",
+    "description": "During my tenure at Cape Ann, spanning over a year, I was afforded a unique opportunity to immerse myself in the dynamic world of full-stack development. This experience offering me a 8rsthand taste of collaborative teamwork and project life-cycle management.",
+    "buttonText": "View Repo",
+    "date": "July 2019 - July 2020",
+    "icon": "work"
+  },
+  {
+    "id": 3,
+    "title": "Bachelor of Information Technology, IPI Academy",
+    "description": "While at IPI Academy, I got deep into various facets of IT, discovering a profound passion for subjects that truly resonated with me. The immersive curriculum exposed me to an array of captivating topics, including operating systems, data structures, and object-oriented programming. These subjects, in particular, ignited my curiosity and drove me to explore their intricacies with fervor.",
+    "buttonText": "Go to Repo",
+    "date": "Sep 2018 - March 2022",
+    "icon": "education"
+  },
+  {
+    "id": 4,
+    "title": "Bild IT",
+    "description": "Stepping into the world of programming, I have dedicated a year to continuous learning and improvement, ultimately achieving success in procedural and object-oriented exam. This milestone solidi8ed my foundational understanding of full-stack development.",
+    "buttonText": "See Repo",
+    "date": "June 2018 - Aug 2019",
+    "icon": "education"
+  }
+]

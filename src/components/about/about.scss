@@ -1,0 +1,11 @@
+@import "../../globals/variables.scss";
+.about-wrapper {
+  height: unset;
+}
+.vertical-timeline-element-content {
+  background-color: #ffffff10 !important;
+  border: 2px solid white;
+}
+.vertical-timeline-element-icon {
+  background-color: $color-cta;
+}
