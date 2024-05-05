@@ -1,0 +1,50 @@
+@import "../../globals/variables.scss";
+@import "../../globals/mixins.scss";
+section#projects {
+  @include default-flex;
+  gap: 20px;
+  @include lower(sm) {
+    gap: 0px;
+  }
+}
+article {
+  @include default-flex;
+  align-items: flex-start;
+  position: relative;
+  width: 390px;
+  min-height: 230px;
+  padding: 20px;
+  border: 2px solid white;
+  border-radius: 0.25em;
+  border-bottom: 5px solid white;
+  background-color: $color-transparent-white;
+  @include lower(sm) {
+    gap: 10px;
+  }
+  h3 {
+    font-size: 36px;
+  }
+  hr {
+    width: 80%;
+    @include remove-default-spacing;
+  }
+  .article-footer {
+    align-self: end;
+    @include default-flex;
+    justify-content: space-between;
+    width: 100%;
+    @include lower(sm) {
+      justify-content: center;
+      gap: 10px;
+    }
+    .article-tools {
+      @include default-flex;
+      gap: 20px;
+    }
+    a {
+      font-size: 20px;
+      padding-bottom: 5px;
+      border-bottom: 3px solid $color-cta;
+    }
+  }
+}

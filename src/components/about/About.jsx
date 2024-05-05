@@ -1,6 +1,5 @@
 import "./about.scss";
 import timeline from "./../../assets/timeline.json";
-import { useEffect } from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
