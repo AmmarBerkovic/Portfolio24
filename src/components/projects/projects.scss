@@ -40,8 +40,12 @@ article {
     .article-tools {
       @include default-flex;
       gap: 20px;
+      img {
+        height: 25px;
+      }
     }
     a {
+      font-weight: 600;
       font-size: 20px;
       padding-bottom: 5px;
       border-bottom: 3px solid $color-cta;

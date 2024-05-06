@@ -4,13 +4,13 @@
     "title": "Mirror FE",
     "description": "MirrorFE (frontend) is a management tool that offers continuous tracking of user activities, creating detailed records that are stored and utilized to provide an overview of progress made over time.",
     "link": "https://github.com/AmmarBerkovic/MirrorFE",
-    "tools": ["Angular", "HTML5", "CSS3"]
+    "tools": ["Angular", "HTML5", "SASS"]
   },
   {
     "id": 2,
     "title": "Mirror BE",
     "description": "MirrorBE (backend) is API server that responds to MirrorFE CRUD & Filtering requests to preform operations on entities from MongoDB database. ",
     "link": "https://github.com/AmmarBerkovic/MirrorBE",
-    "tools": ["MongoDB", "Node.js", "Express"]
+    "tools": ["Node.js", "MongoDB", "Express"]
   }
 ]
