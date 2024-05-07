@@ -3,9 +3,9 @@ import ReactDOM from "react-dom/client";
 import "./globals/styles.scss";
 import Home from "./pages/Home";
 import reportWebVitals from "./reportWebVitals";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   { path: "/", element: <Home />}
 ]);
 
