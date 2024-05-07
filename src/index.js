@@ -1,24 +1,25 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom";
 import "./globals/styles.scss";
 import Home from "./pages/Home";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter as Router, RouterProvider } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-const basename = process.env.PUBLIC_URL;
-console.log(basename);
-
-const router = [
-  { path: "/", element: <Home /> }
-];
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <React.StrictMode>
-    <Router basename={basename}>
-      <RouterProvider router={router} />
+const App = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </Router>
-  </React.StrictMode>
+  );
+};
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById("root")
 );
 
 reportWebVitals();
