@@ -6,6 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router, RouterProvider } from "react-router-dom";
 
 const basename = process.env.PUBLIC_URL;
+console.log(basename);
 
 const router = [
   { path: "/", element: <Home /> }
