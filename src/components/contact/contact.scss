@@ -19,11 +19,6 @@ form {
       font-size: 26px;
     }
   }
-  .contact-text {
-    @include lower(sm) {
-      display: none;
-    }
-  }
   form {
     flex-wrap: nowrap;
     width: 60%;

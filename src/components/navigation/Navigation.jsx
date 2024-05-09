@@ -7,7 +7,7 @@ import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import "./navigation.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState, useEffect, useRef } from "react";
-import { NavLink } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
 
 export default function Navigation() {
   const [hambMenu, setHambMenu] = useState(false);
@@ -64,16 +64,19 @@ export default function Navigation() {
         <nav>
           <ul className="section-navigation">
             <li>
-              <NavLink to="#home" activeClassName="active">Home</NavLink>
+              <Link smooth to="#home" activeClassName="active">
+                Home
+              </Link>
             </li>
             <li>
-              <NavLink to="#about" activeClassName="active">About</NavLink>
+              <Link smooth to="#about" activeClassName="active">
+                About
+              </Link>
             </li>
             <li>
-              <NavLink to="#projects" activeClassName="active">Projects</NavLink>
-            </li>
-            <li>
-              <NavLink to="#contact" activeClassName="active">Contact</NavLink>
+              <Link smooth to="#projects" activeClassName="active">
+                Projects
+              </Link>
             </li>
           </ul>
           <ul className="social-icons">

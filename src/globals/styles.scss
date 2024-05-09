@@ -5,7 +5,10 @@
 //TODO: does importing styles.scss imports it's imports, if so delete it from other files
 * {
   font-family: "Nunito";
-  color: #fff0db;
+  color: $color-white;
+}
+body {
+  background-color: $color-pallete-gray;
 }
 a,
 li {
@@ -14,6 +17,11 @@ li {
 }
 h1, h2,h3, p, ul {
   @include remove-default-spacing;
+}
+#tsparticles {
+  @include lower(md) {
+    display: none;
+  }
 }
 section {
   @include center-container;
