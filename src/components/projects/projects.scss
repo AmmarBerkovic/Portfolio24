@@ -6,6 +6,11 @@ section#projects {
   @include lower(sm) {
     gap: 0px;
   }
+  h1 {
+    font-size: 32px;
+    text-align: center;
+    width: 100%;
+  }
 }
 article {
   @include default-flex;
