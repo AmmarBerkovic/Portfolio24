@@ -26,7 +26,7 @@ export default function ParticlesBackground() {
             value: "#171717",
           },
         },
-        fpsLimit: 120,
+        fpsLimit: 60,
         interactivity: {
           events: {
             onClick: {

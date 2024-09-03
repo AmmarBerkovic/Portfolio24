@@ -81,17 +81,17 @@ export default function Navigation() {
           </ul>
           <ul className="social-icons">
             <li>
-              <a href="www.google.com">
+              <a target="_blank" href="https://github.com/AmmarBerkovic">
                 <FontAwesomeIcon icon={faGithub} size="2x" />
               </a>
             </li>
             <li>
-              <a href="www.google.com">
+              <a target="_blank" href="https://www.linkedin.com/in/ammar-berkovic-8b6422247/">
                 <FontAwesomeIcon icon={faLinkedinIn} size="2x" />
               </a>
             </li>
             <li>
-              <a href="www.google.com">
+              <a href="mailto:berkovicammar1@gmail.com">
                 <FontAwesomeIcon icon={faEnvelope} size="2x" />
               </a>
             </li>
