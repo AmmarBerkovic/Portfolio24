@@ -14,8 +14,7 @@ export default function Landing() {
           Experienced full stack developer equipped with a diverse and promising
           skill-set looking for a growth-oriented company where I can contribute
           to impactful projects and further enhance my expertise in web
-          development. Experienced developer equipped with a diverse and
-          promising skill-set looking for a growth-oriented company.{" "}
+          development.{" "}
         </p>
       </div>
       <div className="contact-block">

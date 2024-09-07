@@ -59,9 +59,9 @@ export default function ParticlesBackground() {
           number: {
             density: {
               enable: true,
-              area: 500,
+              area: 800, // Increase area to reduce density
             },
-            value: 120,
+            value: 100, // Lower the number of particles
           },
           opacity: {
             value: 0.4, // Initial opacity
@@ -76,7 +76,7 @@ export default function ParticlesBackground() {
           shape: {
             // type: 'none', // No shape defined (to create a starry sky effect)
             // To use custom image instead, uncomment the following lines:
-            type: "image",
+            type: "circle",
             image: {
               src: `${snowflake}`,
               width: 50,
