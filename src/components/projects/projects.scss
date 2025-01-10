@@ -2,58 +2,64 @@
 @import "../../globals/mixins.scss";
 section#projects {
   @include default-flex;
-  gap: 20px;
+  // gap: 20px;
+  min-height: 50vh;
   @include lower(sm) {
     gap: 0px;
   }
   h1 {
     font-size: 32px;
     text-align: center;
+    align-self: end;
     width: 100%;
   }
 }
-article {
+.articles-wrapper {
   @include default-flex;
-  align-items: flex-start;
-  position: relative;
-  width: 390px;
-  min-height: 230px;
-  padding: 20px;
-  border: 2px solid white;
-  border-radius: 0.25em;
-  border-bottom: 5px solid white;
-  background-color: $color-transparent-white;
-  @include lower(sm) {
-    gap: 10px;
-  }
-  h3 {
-    font-size: 36px;
-  }
-  hr {
-    width: 80%;
-    @include remove-default-spacing;
-  }
-  .article-footer {
-    align-self: end;
+  gap: 20px;
+  article {
     @include default-flex;
-    justify-content: space-between;
-    width: 100%;
+    align-items: flex-start;
+    position: relative;
+    width: 380px;
+    min-height: 230px;
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 0.25em;
+    border-bottom: 5px solid white;
+    background-color: $color-transparent-white;
     @include lower(sm) {
-      justify-content: center;
       gap: 10px;
     }
-    .article-tools {
-      @include default-flex;
-      gap: 20px;
-      img {
-        height: 25px;
-      }
+    h3 {
+      font-size: 36px;
     }
-    a {
-      font-weight: 600;
-      font-size: 20px;
-      padding-bottom: 5px;
-      border-bottom: 3px solid $color-cta;
+    hr {
+      width: 80%;
+      @include remove-default-spacing;
+    }
+    .article-footer {
+      align-self: end;
+      @include default-flex;
+      justify-content: space-between;
+      width: 100%;
+      @include lower(sm) {
+        justify-content: center;
+        gap: 10px;
+      }
+      .article-tools {
+        @include default-flex;
+        gap: 20px;
+        img {
+          height: 25px;
+        }
+      }
+      a {
+        font-weight: 600;
+        font-size: 20px;
+        padding-bottom: 5px;
+        border-bottom: 3px solid $color-cta;
+      }
     }
   }
 }

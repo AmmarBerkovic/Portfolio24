@@ -1,7 +1,7 @@
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 import { useCallback } from "react";
-import snowflake from "./../../assets/images/snowflake.svg"
+import snowflake from "./../../assets/images/snowflake.webp";
 
 export default function ParticlesBackground() {
   const particlesInit = useCallback(async (engine) => {
@@ -21,12 +21,12 @@ export default function ParticlesBackground() {
       init={particlesInit}
       loaded={particlesLoaded}
       options={{
+        fpsLimit: 60,
         background: {
           color: {
-            value: "#171717",
+            value: "#16262e",
           },
         },
-        fpsLimit: 60,
         interactivity: {
           events: {
             onClick: {
@@ -41,12 +41,12 @@ export default function ParticlesBackground() {
           },
           modes: {
             push: {
-              quantity: 20,
+              quantity: 20, //number of particles created on click
             },
             grab: {
               distance: 100, // Adjust the distance at which particles are grabbed by the cursor
             },
-          },  
+          },
         },
         particles: {
           move: {
@@ -59,12 +59,12 @@ export default function ParticlesBackground() {
           number: {
             density: {
               enable: true,
-              area: 800, // Increase area to reduce density
+              area: 600, // Increase area to reduce density
             },
             value: 100, // Lower the number of particles
           },
           opacity: {
-            value: 0.4, // Initial opacity
+            value: 1, // Initial opacity //0.4 if snowflakes
             random: true, // Randomize opacity
             anim: {
               enable: true,
@@ -74,9 +74,9 @@ export default function ParticlesBackground() {
             },
           },
           shape: {
-            // type: 'none', // No shape defined (to create a starry sky effect)
+            // type: ['circle']
             // To use custom image instead, uncomment the following lines:
-            type: "circle",
+            type: "image",
             image: {
               src: `${snowflake}`,
               width: 50,
@@ -84,10 +84,16 @@ export default function ParticlesBackground() {
             },
           },
           size: {
-            value: { min: 3, max: 7 },
+            value: { min: 3, max: 8 },
+            // anim: {
+            //   enable: true, // Enable size animation
+            //   speed: 9, // Speed of size change
+            //   size_min: 3 , // Minimum size during animation
+            //   sync: false, // If true, all particles will change size in sync
+            // },
           },
           links: {
-            color: "#7C7C7C",
+            color: "#7C7C7C",//#F5EDF0
             // enable: true,
             opacity: 1,
             width: 0.5,

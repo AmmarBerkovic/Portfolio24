@@ -18,11 +18,11 @@ li {
 h1, h2,h3, p, ul {
   @include remove-default-spacing;
 }
-#tsparticles {
-  @include lower(md) {
-    display: none;
-  }
-}
+// #tsparticles {
+//   @include lower(md) {
+//     display: none;
+//   }
+// }
 section {
   @include center-container;
   @include default-flex;
