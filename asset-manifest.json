@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio24/static/css/main.d255afd5.css",
-    "main.js": "/Portfolio24/static/js/main.96e8e905.js",
+    "main.css": "/Portfolio24/static/css/main.2c19e543.css",
+    "main.js": "/Portfolio24/static/js/main.a0f943eb.js",
     "static/js/453.1407b060.chunk.js": "/Portfolio24/static/js/453.1407b060.chunk.js",
     "static/media/Nunito-Medium.ttf": "/Portfolio24/static/media/Nunito-Medium.06740446a9f13288701b.ttf",
     "static/media/Nunito-Light.ttf": "/Portfolio24/static/media/Nunito-Light.677d4143aa9440e30cad.ttf",
@@ -11,12 +11,12 @@
     "static/media/express.svg": "/Portfolio24/static/media/express.4af83a6929a333285fff185b4caee882.svg",
     "index.html": "/Portfolio24/index.html",
     "static/media/mongodb.svg": "/Portfolio24/static/media/mongodb.0781b723446e1f8a1734f7831a9c3313.svg",
-    "main.d255afd5.css.map": "/Portfolio24/static/css/main.d255afd5.css.map",
-    "main.96e8e905.js.map": "/Portfolio24/static/js/main.96e8e905.js.map",
+    "main.2c19e543.css.map": "/Portfolio24/static/css/main.2c19e543.css.map",
+    "main.a0f943eb.js.map": "/Portfolio24/static/js/main.a0f943eb.js.map",
     "453.1407b060.chunk.js.map": "/Portfolio24/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d255afd5.css",
-    "static/js/main.96e8e905.js"
+    "static/css/main.2c19e543.css",
+    "static/js/main.a0f943eb.js"
   ]
 }
