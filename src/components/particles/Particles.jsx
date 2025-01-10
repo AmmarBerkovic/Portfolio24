@@ -53,7 +53,7 @@ export default function ParticlesBackground() {
             direction: "none",
             enable: true,
             random: false,
-            speed: 0.7,
+            speed: 1,
             straight: false,
           },
           number: {
@@ -64,7 +64,7 @@ export default function ParticlesBackground() {
             value: 100, // Lower the number of particles
           },
           opacity: {
-            value: 1, // Initial opacity //0.4 if snowflakes
+            value: 0.3, // Initial opacity //0.4 if snowflakes
             random: true, // Randomize opacity
             anim: {
               enable: true,
