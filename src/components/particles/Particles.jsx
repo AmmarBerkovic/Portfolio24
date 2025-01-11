@@ -93,10 +93,10 @@ export default function ParticlesBackground() {
             // },
           },
           links: {
-            color: "#7C7C7C",//#F5EDF0
+            color: "#e0ecff",//#F5EDF0
             // enable: true,
             opacity: 1,
-            width: 0.5,
+            width: 1,
           },
         },
         detectRetina: true,
