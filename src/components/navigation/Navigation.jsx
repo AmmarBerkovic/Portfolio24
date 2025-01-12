@@ -7,12 +7,13 @@ import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import "./navigation.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState, useEffect, useRef } from "react";
-import { NavLink } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 export default function Navigation() {
   const [hambMenu, setHambMenu] = useState(false);
   const headerRef = useRef(null);
   const hambMenuRef = useRef(null);
+  const [activeSection, setActiveSection] = useState(""); // State to track the active section
 
   const toggleHamburgerMenu = () => {
     setHambMenu(!hambMenu);
@@ -44,7 +45,30 @@ export default function Navigation() {
     //WHEN hamb is open THEN listen
     if (hambMenu) document.addEventListener("click", handleClickOutside);
   }, [hambMenu]);
-
+  useEffect(() => {
+    // Intersection Observer for detecting when sections are in the viewport
+    const sections = document.querySelectorAll("section");
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.6, // Trigger when 60% of the section is visible
+    };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id); // Set the active section
+        }
+      });
+    }, options);
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+    return () => {
+      sections.forEach((section) => {
+        observer.unobserve(section);
+      });
+    };
+  }, []);
   return (
     <>
       <FontAwesomeIcon
@@ -64,31 +88,49 @@ export default function Navigation() {
         <nav>
           <ul className="section-navigation">
             <li>
-              <NavLink to="#home" activeClassName="active">Home</NavLink>
+              <HashLink
+                smooth
+                to="#home"
+                className={activeSection === "home" ? "active" : ""}
+              >
+                Home
+              </HashLink>
             </li>
             <li>
-              <NavLink to="#about" activeClassName="active">About</NavLink>
+              <HashLink
+                smooth
+                to="#about"
+                className={activeSection === "about" ? "active" : ""}
+              >
+                About
+              </HashLink>
             </li>
             <li>
-              <NavLink to="#projects" activeClassName="active">Projects</NavLink>
-            </li>
-            <li>
-              <NavLink to="#contact" activeClassName="active">Contact</NavLink>
+              <HashLink
+                smooth
+                to="#projects"
+                className={activeSection === "projects" ? "active" : ""}
+              >
+                Projects
+              </HashLink>
             </li>
           </ul>
           <ul className="social-icons">
             <li>
-              <a href="www.google.com">
+              <a target="_blank" href="https://github.com/AmmarBerkovic">
                 <FontAwesomeIcon icon={faGithub} size="2x" />
               </a>
             </li>
             <li>
-              <a href="www.google.com">
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/ammar-berkovic-8b6422247/"
+              >
                 <FontAwesomeIcon icon={faLinkedinIn} size="2x" />
               </a>
             </li>
             <li>
-              <a href="www.google.com">
+              <a href="mailto:berkovicammar1@gmail.com">
                 <FontAwesomeIcon icon={faEnvelope} size="2x" />
               </a>
             </li>

@@ -5,13 +5,12 @@ import Project from "./project/Project";
 export default function Projects() {
   return (
     <section id="projects">
-      {projects.map((el) => {
-        return (
-          <Project
-            {...el}
-          />
-        );
-      })}
+      <h1>Projects</h1>
+      <div className="articles-wrapper">
+        {projects.map((el) => {
+          return <Project {...el} />;
+        })}
+      </div>
     </section>
   );
 }

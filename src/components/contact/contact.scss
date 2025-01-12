@@ -19,11 +19,6 @@ form {
       font-size: 26px;
     }
   }
-  .contact-text {
-    @include lower(sm) {
-      display: none;
-    }
-  }
   form {
     flex-wrap: nowrap;
     width: 60%;
@@ -38,7 +33,7 @@ form {
       background-color: #FFFFFF10 !important;
       width: 100%;
       padding: 10px;
-      border: 1px solid white;
+      border: 1px solid $color-white;
       border-radius: 4px;
       font-size: 15px;
       @include lower (lg) {
@@ -47,13 +42,13 @@ form {
       @include lower(sm) {
         width: 100%;
       }
+      &::placeholder {
+        color: $color-white;
+      }
     }
-    // textarea {
-    //   max-width: 100%;
-    //   min-width: 100%;
-    //   max-height: 120px;
-    //   min-height: 50px;
-    // }
+    textarea {
+      
+    }
     button {
       cursor: pointer;
       text-transform: uppercase;

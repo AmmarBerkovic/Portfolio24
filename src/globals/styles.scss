@@ -3,9 +3,12 @@
 @import "./fonts.scss";
 
 //TODO: does importing styles.scss imports it's imports, if so delete it from other files
-* {
+*:not(path) {
   font-family: "Nunito";
-  color: #fff0db;
+  color: $color-white;
+}
+body {
+  background-color: $color-pallete-gray;
 }
 a,
 li {

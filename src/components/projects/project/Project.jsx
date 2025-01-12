@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faAngular,
   faNodeJs,
+  faReact,
   faSass,
   faHtml5,
 } from "@fortawesome/free-brands-svg-icons";
@@ -33,6 +34,9 @@ export default function Project({ title, description, link, tools }) {
               case "Node.js":
                 icon = faNodeJs;
                 break;
+              case "React":
+                icon = faReact;
+                break;
               case "Express":
                 icon = "express";
                 break;
@@ -52,11 +56,6 @@ export default function Project({ title, description, link, tools }) {
               </>
             );
           })}
-          {/* <FontAwesomeIcon icon={faReact} size="2x" />
-          <FontAwesomeIcon icon={faAngular} size="2x" />
-          <FontAwesomeIcon icon={faNodeJs} size="2x" />
-          <FontAwesomeIcon icon={faHtml5} size="2x" />
-          <FontAwesomeIcon icon={faSass} size="2x" /> */}
         </div>
         <Link to={link} target="_blank">
           View Code

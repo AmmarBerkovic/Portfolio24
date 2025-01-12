@@ -12,5 +12,12 @@
     "description": "MirrorBE (backend) is API server that responds to MirrorFE CRUD & Filtering requests to preform operations on entities from MongoDB database. ",
     "link": "https://github.com/AmmarBerkovic/MirrorBE",
     "tools": ["Node.js", "MongoDB", "Express"]
+  }, 
+  {
+    "id": 3,
+    "title": "The Movie DB",
+    "description": "Powered by The Movie DB API this project effortlessly browses through a comprehensive library using our advanced state management system, featuring intuitive filtering and a robust search bar. Each title has its own dedicated page, offering detailed information and a trailer.",
+    "link": "https://github.com/AmmarBerkovic/The-Movie-App",
+    "tools": ["React", "HTML5", "SASS"]
   }
 ]

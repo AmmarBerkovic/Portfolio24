@@ -38,8 +38,11 @@ header {
         flex-direction: column;
         gap: 16px;
       }
-      &.section-navigation li:hover {
-        border-bottom: 3px solid $color-cta;
+      &.section-navigation li {
+        border-bottom: 2px solid transparent;
+        a.active {
+          border-bottom: 2px solid $color-cta;
+        }
       }
       li {
         font-size: 1.5rem;
@@ -52,7 +55,8 @@ header {
     }
   }
 }
-.hamburgerMenuIcon, .xMarkIcon {
+.hamburgerMenuIcon,
+.xMarkIcon {
   display: none;
   z-index: 101;
   @include lower(md) {
