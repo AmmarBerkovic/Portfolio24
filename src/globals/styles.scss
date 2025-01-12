@@ -3,7 +3,7 @@
 @import "./fonts.scss";
 
 //TODO: does importing styles.scss imports it's imports, if so delete it from other files
-* {
+*:not(path) {
   font-family: "Nunito";
   color: $color-white;
 }
@@ -18,11 +18,6 @@ li {
 h1, h2,h3, p, ul {
   @include remove-default-spacing;
 }
-// #tsparticles {
-//   @include lower(md) {
-//     display: none;
-//   }
-// }
 section {
   @include center-container;
   @include default-flex;
