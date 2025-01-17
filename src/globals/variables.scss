@@ -2,4 +2,12 @@ $max-content-width: 1320px;
 $color-pallete-gray: #16262e;
 $color-cta: #03c4ff;
 $color-white: #f9f9f9;
-$color-transparent-white: #FFFFFF10;
+$color-transparent-white: #ffffff10;
+
+$breakpoints: (
+  xs: 0px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1220px,
+);

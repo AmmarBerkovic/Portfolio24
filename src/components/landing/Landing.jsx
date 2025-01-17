@@ -7,8 +7,8 @@ import { faDownload } from "@fortawesome/free-solid-svg-icons";
 export default function Landing() {
   const downloadCV = () => {
     const link = document.createElement("a");
-    link.href = resume; // Replace with your file's path
-    link.download = "Ammar Berkovic CV.pdf"; // Specify the filename
+    link.href = resume;
+    link.download = "Ammar Berkovic CV.pdf";
     link.click();
   };
 
