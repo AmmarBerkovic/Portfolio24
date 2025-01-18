@@ -7,7 +7,7 @@ import About from "../components/about/About";
 export default function Home() {
   return (
     <>
-      <ParticlesBackground id="particles"/>
+      <ParticlesBackground id="particles" />
       <Navigation />
       <Landing />
       <About />
