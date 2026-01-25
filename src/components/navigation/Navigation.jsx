@@ -8,6 +8,7 @@ import "./navigation.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState, useEffect, useRef } from "react";
 import { HashLink } from "react-router-hash-link";
+import BREAKPOINTS from "../../constants/breakpoints";
 
 export default function Navigation() {
   const [hambMenu, setHambMenu] = useState(false);
@@ -30,7 +31,7 @@ export default function Navigation() {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 500) {
+      if (window.innerWidth > BREAKPOINTS.md) {
         setHambMenu(() => false);
       }
     };
@@ -43,7 +44,12 @@ export default function Navigation() {
 
   useEffect(() => {
     //WHEN hamb is open THEN listen
-    if (hambMenu) document.addEventListener("click", handleClickOutside);
+    if (hambMenu) {
+      document.addEventListener("click", handleClickOutside);
+      return () => {
+        document.removeEventListener("click", handleClickOutside);
+      };
+    }
   }, [hambMenu]);
   useEffect(() => {
     // Intersection Observer for detecting when sections are in the viewport
@@ -75,6 +81,16 @@ export default function Navigation() {
         ref={hambMenuRef}
         className="hamburgerMenuIcon"
         onClick={toggleHamburgerMenu}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            toggleHamburgerMenu();
+          }
+        }}
+        role="button"
+        aria-label="Open navigation menu"
+        aria-expanded={hambMenu}
+        tabIndex={0}
         icon={faBurger}
         size="2x"
       />
@@ -82,6 +98,15 @@ export default function Navigation() {
         <FontAwesomeIcon
           className="xMarkIcon"
           onClick={toggleHamburgerMenu}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              toggleHamburgerMenu();
+            }
+          }}
+          role="button"
+          aria-label="Close navigation menu"
+          tabIndex={0}
           icon={faXmark}
           size="2x"
         />
@@ -117,21 +142,39 @@ export default function Navigation() {
           </ul>
           <ul className="social-icons">
             <li>
-              <a target="_blank" href="https://github.com/AmmarBerkovic">
-                <FontAwesomeIcon icon={faGithub} size="2x" />
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/AmmarBerkovic"
+                aria-label="Visit Ammar's GitHub profile"
+              >
+                <FontAwesomeIcon icon={faGithub} size="2x" aria-hidden="true" />
               </a>
             </li>
             <li>
               <a
                 target="_blank"
+                rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/ammar-berkovic-8b6422247/"
+                aria-label="Visit Ammar's LinkedIn profile"
               >
-                <FontAwesomeIcon icon={faLinkedinIn} size="2x" />
+                <FontAwesomeIcon
+                  icon={faLinkedinIn}
+                  size="2x"
+                  aria-hidden="true"
+                />
               </a>
             </li>
             <li>
-              <a href="mailto:berkovicammar1@gmail.com">
-                <FontAwesomeIcon icon={faEnvelope} size="2x" />
+              <a
+                href="mailto:berkovicammar1@gmail.com"
+                aria-label="Send email to Ammar"
+              >
+                <FontAwesomeIcon
+                  icon={faEnvelope}
+                  size="2x"
+                  aria-hidden="true"
+                />
               </a>
             </li>
           </ul>

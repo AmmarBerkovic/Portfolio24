@@ -20,10 +20,22 @@ export default function Landing() {
           Meet{" "}
           <span>
             Ammar Berkovic{" "}
-            <a onClick={downloadCV}>
+            <a
+              onClick={downloadCV}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  downloadCV();
+                }
+              }}
+              role="button"
+              tabIndex={0}
+              aria-label="Download Ammar Berkovic's CV"
+            >
               <FontAwesomeIcon
                 icon={faDownload}
-                style={{ color: "#03c4ff", cursor: 'pointer' }}
+                style={{ color: "#03c4ff", cursor: "pointer" }}
+                aria-hidden="true"
                 beatFade
               />
             </a>

@@ -8,7 +8,7 @@ export default function Projects() {
       <h1>Projects</h1>
       <div className="articles-wrapper">
         {projects.map((el) => {
-          return <Project {...el} />;
+          return <Project key={el.title} {...el} />;
         })}
       </div>
     </section>

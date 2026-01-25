@@ -12,7 +12,7 @@ export default function ParticlesBackground() {
   }, []);
 
   const particlesLoaded = useCallback(async (container) => {
-    await console.log(container);
+    // Particles loaded successfully
   }, []);
 
   return (
@@ -93,7 +93,7 @@ export default function ParticlesBackground() {
             // },
           },
           links: {
-            color: "#e0ecff",//#F5EDF0
+            color: "#e0ecff", //#F5EDF0
             // enable: true,
             opacity: 1,
             width: 1,

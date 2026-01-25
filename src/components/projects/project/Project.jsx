@@ -1,3 +1,5 @@
+import React from "react";
+import PropTypes from "prop-types";
 import "./../projects.scss";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,7 +13,12 @@ import {
 import express from "./../../../assets/images/express.svg";
 import mongodb from "./../../../assets/images/mongodb.svg";
 
-export default function Project({ title, description, link, tools }) {
+const Project = React.memo(function Project({
+  title,
+  description,
+  link,
+  tools,
+}) {
   return (
     <article>
       <h3>{title}</h3>
@@ -45,7 +52,7 @@ export default function Project({ title, description, link, tools }) {
                 break;
             }
             return (
-              <>
+              <React.Fragment key={tool}>
                 {icon === "express" ? (
                   <img src={express} alt="Express" />
                 ) : icon === "mongo" ? (
@@ -53,14 +60,23 @@ export default function Project({ title, description, link, tools }) {
                 ) : (
                   <FontAwesomeIcon icon={icon} size="2x" />
                 )}
-              </>
+              </React.Fragment>
             );
           })}
         </div>
-        <Link to={link} target="_blank">
+        <Link to={link} target="_blank" rel="noopener noreferrer">
           View Code
         </Link>
       </div>
     </article>
   );
-}
+});
+
+Project.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  link: PropTypes.string.isRequired,
+  tools: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
+
+export default Project;

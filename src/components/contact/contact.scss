@@ -1,6 +1,18 @@
 @import "../../globals/variables.scss";
 @import "../../globals/mixins.scss";
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 .contact-wrapper,
 form {
   @include default-flex;
@@ -30,7 +42,7 @@ form {
     }
     input,
     textarea {
-      background-color: $color-transparent-white !important;
+      background-color: $color-transparent-white;
       width: 100%;
       padding: 10px;
       border: 1px solid $color-white;
@@ -46,7 +58,17 @@ form {
         color: $color-white;
       }
     }
-    textarea {
+    .error-message {
+      color: #ff6b6b;
+      font-size: 14px;
+      margin-top: 4px;
+      display: block;
+      text-align: left;
+      width: 100%;
+    }
+    input[aria-invalid="true"],
+    textarea[aria-invalid="true"] {
+      border-color: #ff6b6b;
     }
     button {
       cursor: pointer;
@@ -56,6 +78,15 @@ form {
       background-color: transparent;
       border: 0px;
       border-bottom: 3px solid $color-cta;
+      transition: all 0.3s ease;
+      &:hover:not(:disabled) {
+        transform: translateY(-2px);
+        border-bottom-color: lighten($color-cta, 25%);
+      }
+      &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
     }
   }
 }
