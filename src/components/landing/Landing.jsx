@@ -5,13 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 
 export default function Landing() {
-  const downloadCV = () => {
-    const link = document.createElement("a");
-    link.href = resume;
-    link.download = "Ammar Berkovic CV.pdf";
-    link.click();
-  };
-
   return (
     <section className="landing-wrapper" id="home">
       <div className="info-block">
@@ -21,15 +14,8 @@ export default function Landing() {
           <span>
             Ammar Berkovic{" "}
             <a
-              onClick={downloadCV}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ") {
-                  e.preventDefault();
-                  downloadCV();
-                }
-              }}
-              role="button"
-              tabIndex={0}
+              href={resume}
+              download="Ammar Berkovic CV.pdf"
               aria-label="Download Ammar Berkovic's CV"
             >
               <FontAwesomeIcon

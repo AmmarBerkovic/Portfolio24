@@ -27,7 +27,7 @@ const Project = React.memo(function Project({
       <div className="article-footer">
         <div className="article-tools">
           {tools.map((tool) => {
-            let icon = "none";
+            let icon = null;
             switch (tool) {
               case "Angular":
                 icon = faAngular;
@@ -50,6 +50,12 @@ const Project = React.memo(function Project({
               case "MongoDB":
                 icon = "mongo";
                 break;
+              default:
+                icon = null;
+                break;
+            }
+            if (!icon) {
+              return null;
             }
             return (
               <React.Fragment key={tool}>

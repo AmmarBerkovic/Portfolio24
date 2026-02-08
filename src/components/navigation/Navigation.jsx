@@ -6,7 +6,7 @@ import {
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import "./navigation.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import { HashLink } from "react-router-hash-link";
 import BREAKPOINTS from "../../constants/breakpoints";
 
@@ -16,18 +16,22 @@ export default function Navigation() {
   const hambMenuRef = useRef(null);
   const [activeSection, setActiveSection] = useState(""); // State to track the active section
 
-  const toggleHamburgerMenu = () => {
-    setHambMenu(!hambMenu);
-  };
-  const handleClickOutside = (event) => {
-    if (
-      !hambMenuRef.current.contains(event.target) &&
-      !headerRef.current.contains(event.target)
-    ) {
-      document.removeEventListener("click", handleClickOutside);
-      toggleHamburgerMenu();
-    }
-  };
+  const toggleHamburgerMenu = useCallback(() => {
+    setHambMenu((prev) => !prev);
+  }, []);
+
+  const handleClickOutside = useCallback(
+    (event) => {
+      if (
+        !hambMenuRef.current?.contains(event.target) &&
+        !headerRef.current?.contains(event.target)
+      ) {
+        document.removeEventListener("click", handleClickOutside);
+        toggleHamburgerMenu();
+      }
+    },
+    [toggleHamburgerMenu]
+  );
 
   useEffect(() => {
     const handleResize = () => {
@@ -50,7 +54,7 @@ export default function Navigation() {
         document.removeEventListener("click", handleClickOutside);
       };
     }
-  }, [hambMenu]);
+  }, [hambMenu, handleClickOutside]);
   useEffect(() => {
     // Intersection Observer for detecting when sections are in the viewport
     const sections = document.querySelectorAll("section");
